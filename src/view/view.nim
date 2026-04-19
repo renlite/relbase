@@ -3,13 +3,13 @@ import ../utils/geometry
 import ../utils/renderobject
 
 when defined(GlfwGL):
-  import window/win_glfw as x
+  import window_glfw as x
   import ../painter/gl
-  const WINDRV = "GLFW"
+  const WINDRIVER = "GLFW"
 elif defined(WindyGL):
   import window_windy as x
   import ../painter/gl
-  const WINDRV = "Windy"
+  const WINDRIVER = "Windy"
 
 
 type
@@ -23,8 +23,8 @@ type
 var view*: View
 
 proc newView*(frame: Size, pixScale: float32): View =
-  view = View(winDriver: WINDRV,
-              paintDriver: "test")
+  view = View(winDriver: WINDRIVER,
+              paintDriver: "GL")
   view.viewport = x.createWin(frame)
   view.painter = newPainter(frame, 1.0)
   result = view
@@ -33,21 +33,20 @@ proc renderTree*(self: View, renderObjects: seq[RenderObject]) =
   self.painter.renderTree(renderObjects)
   self.viewport.swapBuffers()
 
-# BEG: Events
+# --- BEG: Events ---
 proc windowResized*(frame: Size) =
   view.painter.frame = frame
   view.renderTree(renderObjects = @[])
 
-proc buttonPressed*() =
-  let pos = view.viewport.getMousePos()
+proc buttonPressed*(pos: Position) =
   echo pos
 
 proc registerResize(self: View, callback: proc(frame: Size)) =
   self.viewport.setWindowResizedCallback(callback)
 
-proc registerButtonPressed(self: View, callback: proc()) =
+proc registerButtonPressed(self: View, callback: proc(pos: Position)) =
   self.viewport.setButtonPressedCallback(callback)
-# END: Events
+# --- END: Events ---
 
 proc init*(self: View) =
   ## Initialization
