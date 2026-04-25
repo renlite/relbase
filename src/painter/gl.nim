@@ -18,13 +18,10 @@ type
   Painter* = ref object
     frame*:               Size # Window Size
     rectangleProgram:     GLuint
-    textProgram:          GLuint
+    textureProgram:       GLuint
     texScale:             float32
     pixScale:             float32 # pre-calculate scale*texScale for each draw
     groupLayers:          seq[GroupLayer]
-    # canvas:             reldir.Canvas
-    # glCtx:              context
-    # contextProvider:    driver.WithContext
 
 proc newPainter*(frame: Size, pixScale: float32): Painter =
   result = Painter(frame: frame,
