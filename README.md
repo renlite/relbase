@@ -36,3 +36,13 @@ If the performance tests are successful Tier 2 in another package could follow.
 - [ ] ...
 
 
+`src/main.nim` is an example or a test file.
+
+
+Windy <br>
+`nimble install https://github.com/treeform/windy` <br>
+`nim.exe c -d:WindyGl -d:release .\src\main.nim` <br>
+GLFW <br>
+`nimble install https://github.com/RowDaBoat/nglfw` <br> 
+`nim.exe c -d:GlfwGL -d:release .\src\main.ni` <br>
+

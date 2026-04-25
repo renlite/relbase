@@ -17,8 +17,8 @@ type
 
   Painter* = ref object
     frame*:               Size # Window Size
-    lineProgram:          GLuint
     rectangleProgram:     GLuint
+    textProgram:          GLuint
     texScale:             float32
     pixScale:             float32 # pre-calculate scale*texScale for each draw
     groupLayers:          seq[GroupLayer]
@@ -214,7 +214,6 @@ proc freeBuffer(vbo: GLuint) =
 
 proc drawGroupLayers*(self: Painter) =
   ## UPLOAD vertecex-streams for GroupLayer to GPU
-  ## old: func (p *painter) drawShapes(frame fyne.Size) {
   glClearColor(0.0f, 0.0f, 0.0f, 0.0f)
   glClear(GL_COLOR_BUFFER_BIT)
   glClear(GL_DEPTH_BUFFER_BIT)
