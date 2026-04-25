@@ -14,12 +14,14 @@ There is no roadmap and no plan for development. It is a learning project to und
 - [ ] Low CPU and GPU power consuming on runtime.  
   - [x] Rectangle, Circle
   - [ ] Text/Fonsts
+- [x] Small size of static compiled binarysr
 - [x] Antialiazing of RenderObjects without hardware antialization (MSAA = MultiSampling Anti-Aliasing).
 - [x] Reduce single Uploads from CPU to GPU. (Group Rendering/Drawing)
 - [x] Simple and readable design and coding (no templates, no macros, no DSL). Nim offers in this case a lot of.
 - [ ]Rendering of areas with caching.
 - [ ]Event Loop on main thread.
 - [ ]Rendering on separate thread.
+- [ ] Stress test with many objects.
 
 Some ideas come from an earlier experiment about "Group Rendering":
 https://github.com/fyne-io/fyne/issues/3412#issuecomment-1646863204
@@ -39,6 +41,8 @@ If the performance tests are successful Tier 2 in another package could follow.
 ## Example
 
 `src/main.nim` is an example or a test file.
+- Resizing window re-draws the screen (no re-rendering). See `src/gl.nim`  `proc renderTree(...)`
+- Mouse-Click prints (`echo`) the coordinates
 
 ![Example_Windy](Example_Windy.png)
 

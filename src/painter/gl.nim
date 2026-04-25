@@ -270,7 +270,7 @@ proc drawGroupLayers*(self: Painter) =
 
 proc renderTree*(self: Painter, roTree: seq[RenderObject]) =
   if self.groupLayers[0].rectanglePoints.len == 0:
-    echo "ROStream is 0"
+    #echo "ROStream is 0"
     for ro in roTree:
       echo ro.id
       self.drawObject(rendObj = ro, pos = Position(x: 4.0, y: 4.0))
