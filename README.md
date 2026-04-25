@@ -14,7 +14,7 @@ There is no roadmap and no plan for development. It is a learning project to und
 - [ ] Low CPU and GPU power consuming on runtime.  
   - [x] Rectangle, Circle
   - [ ] Text/Fonsts
-- [x] Small size of static compiled binarysr
+- [x] Small size of static compiled binary
 - [x] Antialiazing of RenderObjects without hardware antialization (MSAA = MultiSampling Anti-Aliasing).
 - [x] Reduce single Uploads from CPU to GPU. (Group Rendering/Drawing)
 - [x] Simple and readable design and coding (no templates, no macros, no DSL). Nim offers in this case a lot of.
