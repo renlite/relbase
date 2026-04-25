@@ -38,6 +38,7 @@ If the performance tests are successful Tier 2 in another package could follow.
 
 `src/main.nim` is an example or a test file.
 
+![Example_Windy](Example_Windy.png)
 
 Windy <br>
 `nimble install https://github.com/treeform/windy` <br>
