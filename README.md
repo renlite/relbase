@@ -19,8 +19,7 @@ There is no roadmap and no plan for development. It is a learning project to und
 - [x] Reduce single Uploads from CPU to GPU. (Group Rendering/Drawing)
 - [x] Simple and readable design and coding (no templates, no macros, no DSL)
 - [ ] Rendering of areas with caching
-- [ ] Event Loop on main thread
-- [ ] Rendering on separate thread
+- [ ] Event Loop on main thread / Rendering on separate thread
 - [ ] Stress test with many objects
 
 Some ideas come from an earlier experiment about "Group Rendering":
