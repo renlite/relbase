@@ -26,9 +26,10 @@ There is no roadmap and no plan for development. It is a learning project to und
 Some ideas come from an earlier experiment about "Group Rendering":
 https://github.com/fyne-io/fyne/issues/3412#issuecomment-1646863204
 
-If the performance tests are successful Tier 2 in another package could follow.
 
-## Tier 2 - Some aspects for Retained-Mode UI FW:
+If the performance tests are successful Tier 2 (in another package) could follow.
+
+## Tier 2 - Some ideas for Retained-Mode UI FW:
 
 - [ ] Imperative design.
 - [ ] Events with callbacks.
