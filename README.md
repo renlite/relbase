@@ -8,20 +8,20 @@ There is no roadmap and no plan for development. It is a learning project to und
 
 ## Tier 1 - Some aspects for Rendering/Drawing:
 
-- [x] Use only primitive GPU-Objects (traingles) for Rectangle, Circle.
-- [ ] Text/Fonts rendering (as Texture?) - Max texturebuffer GL=32, GLES=16 for one upload to GPU.
-- [x] Transfer as much as possible from CPU to GPU.
-- [ ] Low CPU and GPU power consuming on runtime.  
+- [x] Use only primitive GPU-Objects (traingles) for Rectangle, Circle
+- [ ] Text/Fonts rendering (as Texture?) - Max texturebuffer GL=32, GLES=16 for one upload to GPU
+- [x] Transfer as much as possible from CPU to GPU
+- [ ] Low CPU and GPU power consuming on runtime 
   - [x] Rectangle, Circle
   - [ ] Text/Fonsts
 - [x] Small size of static compiled binary
-- [x] Antialiazing of RenderObjects without hardware antialization (MSAA = MultiSampling Anti-Aliasing).
+- [x] Antialiazing of RenderObjects without hardware antialization (MSAA = MultiSampling Anti-Aliasing)
 - [x] Reduce single Uploads from CPU to GPU. (Group Rendering/Drawing)
-- [x] Simple and readable design and coding (no templates, no macros, no DSL).
-- [ ]Rendering of areas with caching.
-- [ ]Event Loop on main thread.
-- [ ]Rendering on separate thread.
-- [ ] Stress test with many objects.
+- [x] Simple and readable design and coding (no templates, no macros, no DSL)
+- [ ]Rendering of areas with caching
+- [ ]Event Loop on main thread
+- [ ]Rendering on separate thread
+- [ ] Stress test with many objects
 
 Some ideas come from an earlier experiment about "Group Rendering":
 https://github.com/fyne-io/fyne/issues/3412#issuecomment-1646863204
@@ -31,11 +31,11 @@ If the performance tests are successful Tier 2 (in another package) could follow
 
 ## Tier 2 - Some ideas for Retained-Mode UI FW:
 
-- [ ] Imperative design.
-- [ ] Events with callbacks.
+- [ ] Imperative design
+- [ ] Events with callbacks
 - [ ] Simple layout system. (only columns and rows)
-- [ ] Bare minimum Widgets/Controls.
-- [ ] Check, if "Relays" fit for Retained-Mode (https://github.com/nim-lang/uirelays).
+- [ ] Bare minimum Widgets/Controls
+- [ ] Check, if "Relays" fit for Retained-Mode (https://github.com/nim-lang/uirelays)
 - [ ] ...
 
 
@@ -52,5 +52,5 @@ Windy <br>
 `nim.exe c -d:WindyGl -d:release .\src\main.nim` <br>
 GLFW <br>
 `nimble install https://github.com/RowDaBoat/nglfw` <br> 
-`nim.exe c -d:GlfwGL -d:release .\src\main.ni` <br>
+`nim.exe c -d:GlfwGL -d:release .\src\main.nim` <br>
 
