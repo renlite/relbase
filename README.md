@@ -21,6 +21,8 @@ There is no roadmap and no plan for development. It is a learning project to und
 - [ ] Rendering of areas with caching
 - [ ] Event Loop on main thread / Rendering on separate thread
 - [ ] Stress test with many objects
+- [ ] Comparison with other lightweight vector graphics engines
+  - [ ] ThorVG https://github.com/thorvg/thorvg
 
 Some ideas come from an earlier experiment about "Group Rendering":
 https://github.com/fyne-io/fyne/issues/3412#issuecomment-1646863204
