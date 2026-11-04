@@ -1,1 +1,11 @@
 src/main.exe
+src/utils/atlas.nim
+src/utils/allocator.nim
+
+src/shader/slug_frag.hlsl
+src/shader/slug.wgsl
+src/shader/group_glyph_atlas copy.frag
+src/shader/group_glyph_atlas copy.vert
+
+src/data/*.ttf
+src/dist/*.png

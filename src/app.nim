@@ -1,3 +1,4 @@
+import std/[tables, unicode] #for atlas test
 import view/view
 import utils/geometry
 import utils/renderobject
@@ -8,11 +9,13 @@ type
     id: string
     icon: string
     view: View
+    fontName: string
     #for tests, later RenderObject(Interface/Closures)
     renderObjects*: seq[RenderObject] 
 
-proc newApp*(id: string = "app001"): App =
+proc newApp*(id: string = "app001", fontName: string = "data/IBMPlexSans-Regular.ttf" ): App =
   result = App()
+  result.fontName = fontName
   result.id = id
 
 proc initApp*(self: var App) =

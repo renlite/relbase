@@ -16,7 +16,7 @@ varying vec2 rect_size_half;
 
 float calc_distance(vec2 p, vec2 b, float r)
 {
-  vec2 d = abs(p) - b + vec2(r);
+    vec2 d = abs(p) - b + vec2(r);
 	return min(max(d.x, d.y), 0.0) + length(max(d, 0.0)) - r;   
 }
 

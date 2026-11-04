@@ -2,7 +2,7 @@ import geometry
 import color
 
 type
-  RenderObject* = ref object of RootObj
+  RenderObject* = ref object of RootObj    # ?reanme to DrawObject
     id*: string
     position*: Position
     fillColor*: NRGBA
@@ -18,6 +18,11 @@ type
   Circle* = ref object of RenderObject
     radius*: float32
     minRadius*: float32
+
+  Text* = ref object of RenderObject
+    fontName*: string
+    fontSize*: int 
+    value*: string
 
 
 
